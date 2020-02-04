@@ -1,0 +1,53 @@
+{% extends 'template.njk' %}
+
+  {% block head %}
+     <title>Foodfy - {{items.title}}</title>
+  {% endblock %}
+
+{% block content %}
+    <section class="top-container-detail"> <!--Start top container-->
+      <div class="container-image-detail">
+        <img src={{items.image}} alt={{items.title}} title={{items.title}}>
+      </div>
+    </section><!--End top container-->
+</header> <!--End Header-->
+
+<section class="main-detail"> <!--Start Main-->
+  <div class="main-title-detail">
+    <h2>{{items.title}}</h2>
+    <p>por {{items.author}}</p>
+  </div>
+    <div class="ingredients">
+      <h3>Ingredientes</h3>
+      <span class="hide">esconder</span>
+    </div>
+    <ul class="ingredients-items">
+    {% for item in items.ingredients %}
+      <li class="descriptions-items">{{item}}</li>
+    {% endfor %}
+    </ul>
+
+    <div class="ingredients">
+      <h3>Modo de preparo</h3>
+      <span class="hide" id="prepare">esconder</span>
+    </div>
+    <ul class="ingredients-items">
+    {% for item in items.preparation %}
+      <li class="descriptions-items">{{item}}</li>
+    {% endfor %}
+    </ul>
+
+    <div class="ingredients">
+      <h3>Informações adicionais</h3>
+      <span class="hide" id="information">esconder</span>
+    </div>
+    <div class="ingredients-items">
+      <p class="descriptions-items">{{items.information}}</p>
+    
+    </div>
+</section> <!--End Main-->
+<footer class="footer">
+  <p>Todos direitos reservados, receitas Foodfy.</p>
+</footer>
+
+{% endblock %}

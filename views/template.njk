@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+  {% block head %}
+     <title>Foodfy</title>
+  {% endblock %}
+</head>
+<body>
+  <header><!--Start Header-->
+    <section> <!--Start Menu-->
+        <nav class="menu">
+          <a id="logo" href="/"><img src="logo.png" alt="Logo foodfy" title="Logo foodfy"></a>
+          <a href="/sobre">Sobre</a>
+          <a href="/receitas">Receitas</a>
+        </nav>
+    </section> <!--End Menu-->
+
+    {% block content %}
+
+    {% endblock %}
+<script src="script.js"></script>
+</body>
+</html>
